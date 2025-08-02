@@ -9,7 +9,7 @@ import FeedbackForm from "./components/FeedbackForm";
 import FeedbackList from "./components/FeedbackList";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Home as HomeIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 function FeedbackPage() {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -34,17 +34,16 @@ function FeedbackPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
-      <header className="max-w-6xl mx-auto flex justify-between items-center mb-12">
+      <h1 onClick={() => navigate("/") }>
+        <HomeIcon
+          className="relative animate-none text-violet-600 cursor-pointer"
+          size={46}
+        />
+      </h1>
+      <header className="max-w-6xl mx-auto flex justify-center items-center mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight drop-shadow-sm">
           Customer Feedback
         </h1>
-        <button
-          onClick={() => navigate("/")}
-          className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 transform hover:scale-105 active:scale-95 group"
-        >
-          <HomeIcon className="h-5 w-5 mr-2" />
-          Back to Home
-        </button>
       </header>
 
       <section className="mb-16">
