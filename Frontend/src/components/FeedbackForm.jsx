@@ -12,7 +12,7 @@ const FeedbackForm = ({ onSubmitSuccess }) => {
     setSubmissionStatus(null);
 
     try {
-      await axios.post("http://localhost:8080/api/feedback", form);
+      await axios.post("https://feedbackai-2.onrender.com/api/feedback", form);
       setForm({ username: "", message: "" });
       setSubmissionStatus("success");
 

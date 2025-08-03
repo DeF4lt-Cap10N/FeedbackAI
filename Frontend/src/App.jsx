@@ -19,7 +19,7 @@ function FeedbackPage() {
   const fetchFeedbacks = async () => {
     setLoadingFeedbacks(true);
     try {
-      const res = await axios.get("http://localhost:8080/api/feedback");
+      const res = await axios.get("https://feedbackai-2.onrender.com/api/feedback");
       setFeedbacks(res.data);
     } catch (err) {
       console.error("Failed to fetch feedbacks:", err);
